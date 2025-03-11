@@ -1,0 +1,5 @@
+role 'Glob Role'
+	modelPermission: read
+
+	annotation PBI_Id = f93e5aa72cb24388b3c7046f3961daef
+

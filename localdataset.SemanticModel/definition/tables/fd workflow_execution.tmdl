@@ -1,0 +1,235 @@
+table 'fd workflow_execution'
+	lineageTag: 0b3b0c8d-c89e-41c6-b98b-a5dd74c2d7c8
+
+	column workflow_execution_id
+		dataType: double
+		lineageTag: ba6e6964-3797-4e33-8334-aac8ddeb30ba
+		summarizeBy: sum
+		sourceColumn: workflow_execution_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column parent_workflow_execution_id
+		dataType: double
+		lineageTag: 4847e759-1a1a-4182-bdec-2322974a33a8
+		summarizeBy: sum
+		sourceColumn: parent_workflow_execution_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column workflow_request_id
+		dataType: double
+		lineageTag: 868779cc-73f7-4414-9301-3afa1facc5e7
+		summarizeBy: sum
+		sourceColumn: workflow_request_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column project_id
+		dataType: double
+		lineageTag: 1334756c-2b54-4785-b67a-44e029a104f6
+		summarizeBy: none
+		sourceColumn: project_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column project_version_id
+		dataType: double
+		lineageTag: 5fdcdcdf-68a0-421d-8c32-0b64b41523f6
+		summarizeBy: sum
+		sourceColumn: project_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column workflow_version_id
+		dataType: double
+		lineageTag: ef460a05-901c-4ad0-a8e6-9dc65d44483a
+		summarizeBy: sum
+		sourceColumn: workflow_version_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column environment_id
+		dataType: double
+		lineageTag: 8a0fb18e-0a8b-41d2-920b-35ad8ebf4fef
+		summarizeBy: sum
+		sourceColumn: environment_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column instance_id
+		dataType: double
+		lineageTag: c350528f-b1c1-43fa-a6a4-a73de8101b28
+		summarizeBy: sum
+		sourceColumn: instance_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column execution_status
+		dataType: string
+		lineageTag: 47d33165-fceb-4180-a8e3-bf6fe4691c05
+		summarizeBy: none
+		sourceColumn: execution_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9d9d52fa-41d9-4d17-a1ce-645102616bea
+		summarizeBy: none
+		sourceColumn: start_time
+
+		variation Variation
+			isDefault
+			relationship: 4e0ee828-1afa-4667-ace4-6b84df9c4a30
+			defaultHierarchy: LocalDateTable_db324932-c126-49ce-942a-661aff092216.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b83130d2-6a32-4f1d-b23b-7c17edf9362a
+		summarizeBy: none
+		sourceColumn: end_time
+
+		variation Variation
+			isDefault
+			relationship: 79f25040-4db3-404f-9827-04622fedab70
+			defaultHierarchy: LocalDateTable_1e24e30c-ee48-49da-bf70-3522fc7a5d25.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_on
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a4dcb43c-cca4-4b27-b388-bbd46372a285
+		summarizeBy: none
+		sourceColumn: created_on
+
+		variation Variation
+			isDefault
+			relationship: 0d2f32e6-cc40-4cc0-ac60-1a117127f402
+			defaultHierarchy: LocalDateTable_134c21a7-43a5-4a27-afa9-eb999deab8d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_by
+		dataType: string
+		lineageTag: 0db5242b-760b-4c01-a6b2-861b018c3fc7
+		summarizeBy: none
+		sourceColumn: created_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_on
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e638ad4-4d5c-436a-bf9a-595dc20f4749
+		summarizeBy: none
+		sourceColumn: updated_on
+
+		variation Variation
+			isDefault
+			relationship: e19c0ff9-bff1-415b-8947-12489cf0ee7e
+			defaultHierarchy: LocalDateTable_2f58d485-41da-4985-898c-ea64fd7a77d8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column updated_by
+		dataType: string
+		lineageTag: f7f24603-e28a-4563-b85e-ee0cae1bde16
+		summarizeBy: none
+		sourceColumn: updated_by
+
+		annotation SummarizationSetBy = Automatic
+
+	column version_number
+		dataType: double
+		lineageTag: 51c1f25f-a96b-4402-821b-c1f33ee06ce3
+		summarizeBy: sum
+		sourceColumn: version_number
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column workflow_id
+		dataType: double
+		lineageTag: 92637852-b729-4eb6-833a-c642c11bf38e
+		summarizeBy: sum
+		sourceColumn: workflow_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column workflow_type
+		dataType: string
+		lineageTag: c1d5ab0a-9bac-427a-9edd-cc642bb8bdea
+		summarizeBy: none
+		sourceColumn: workflow_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_status
+		dataType: string
+		lineageTag: 15ec1446-5206-48d1-bd4a-f08f2b58e831
+		summarizeBy: none
+		sourceColumn: review_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column aborted_on
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ca30b08b-7cf1-4372-a842-f6621049b68b
+		summarizeBy: none
+		sourceColumn: aborted_on
+
+		variation Variation
+			isDefault
+			relationship: 5008dd9c-eaad-42d9-bce2-988546b53013
+			defaultHierarchy: LocalDateTable_73a71c57-ec71-4b6c-af53-0d6e02b19077.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column sync_environment_id
+		dataType: double
+		lineageTag: 3c90d3d5-60ae-43e5-a9ba-a3a74314f17d
+		summarizeBy: sum
+		sourceColumn: sync_environment_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'fd workflow_execution' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("129.0.0.1", "flexdeploy"),
+				    fd_workflow_execution = Source{[Schema="fd",Item="workflow_execution"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(fd_workflow_execution,{"project_workflow_id", "predeploy_workflow_exec_id", "docker_image_name", "aborted_by"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

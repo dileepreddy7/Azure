@@ -1,0 +1,7 @@
+expression SelectParam = "300" meta [IsParameterQuery = true, IsParameterQueryRequired = true, Type = "Text"]
+	lineageTag: fbea9cec-8afc-4501-b489-4c3c7fdffbd5
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

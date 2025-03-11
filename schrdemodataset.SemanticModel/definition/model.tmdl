@@ -1,0 +1,21 @@
+model Model
+	culture: en-IN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["schrdemo"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.1380.0 (24.04)
+
+ref table schrdemo
+ref table DateTableTemplate_640fdc51-8b52-4ab5-b449-96860a32966a
+ref table LocalDateTable_72ee0721-4d81-4106-9d6c-2d9cc239456f
+ref table LocalDateTable_c1a34633-3bde-4bd1-a5c9-7cb8de123248
+
+ref cultureInfo en-IN
+

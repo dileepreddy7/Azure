@@ -1,0 +1,82 @@
+table schrdemo
+	lineageTag: 5a337e51-d07f-4b05-b69d-6f80d8983d1c
+
+	column tpep_pickup_datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1fbfac38-d7d3-44fb-afbb-fe4404a9dd77
+		summarizeBy: none
+		sourceColumn: tpep_pickup_datetime
+
+		variation Variation
+			isDefault
+			relationship: 5898ec11-6305-4a48-93b6-53ca76e92be2
+			defaultHierarchy: LocalDateTable_72ee0721-4d81-4106-9d6c-2d9cc239456f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column tpep_dropoff_datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1064c50d-1fbc-4573-bcdd-dae2ca66dd04
+		summarizeBy: none
+		sourceColumn: tpep_dropoff_datetime
+
+		variation Variation
+			isDefault
+			relationship: fd649f4c-9863-4425-af31-bf3767459870
+			defaultHierarchy: LocalDateTable_c1a34633-3bde-4bd1-a5c9-7cb8de123248.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column distance
+		dataType: double
+		lineageTag: 51b0b695-4246-41fb-a3c6-477d79a3e871
+		summarizeBy: sum
+		sourceColumn: distance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fare_amount
+		dataType: double
+		lineageTag: 24d2f0a4-8b14-4a33-958d-4d984a51db9d
+		summarizeBy: sum
+		sourceColumn: fare_amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pickup_zip
+		dataType: int64
+		formatString: 0
+		lineageTag: 5788e193-025f-414d-8291-1ac7c3e53769
+		summarizeBy: sum
+		sourceColumn: pickup_zip
+
+		annotation SummarizationSetBy = Automatic
+
+	column destination_zip
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c42fc63-ca8a-4942-bc03-e2cb3614ff8d
+		summarizeBy: sum
+		sourceColumn: destination_zip
+
+		annotation SummarizationSetBy = Automatic
+
+	partition schrdemo = m
+		mode: import
+		source =
+				let
+				    Source = Databricks.Catalogs("adb-4273707538460754.14.azuredatabricks.net", "sql/protocolv1/o/4273707538460754/0417-133005-bs1ea3la", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    hive_metastore_Database = Source{[Name="hive_metastore",Kind="Database"]}[Data],
+				    democicd_Schema = hive_metastore_Database{[Name="democicd",Kind="Schema"]}[Data],
+				    schrdemo_Table = democicd_Schema{[Name="schrdemo",Kind="Table"]}[Data]
+				in
+				    schrdemo_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.49\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.49\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU11",
+            "path": "BaseThemes/CY23SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"10ad6a5b6eac33ecc49b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"width\":280,\"height\":280,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6.R)\"},{\"queryRef\":\"Sum(10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6.G)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"1\",\"Entity\":\"10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"R\"}},\"Function\":0},\"Name\":\"Sum(10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6.R)\",\"NativeReferenceName\":\"Sum of R\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"G\"}},\"Function\":0},\"Name\":\"Sum(10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6.G)\",\"NativeReferenceName\":\"Sum of G\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"1\"}},\"Property\":\"R\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 280.00,
+          "width": 280.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

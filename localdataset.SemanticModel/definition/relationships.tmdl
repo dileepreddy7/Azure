@@ -1,0 +1,44 @@
+relationship 881d4bcb-1281-4384-9803-61bc8cf81c9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd project'.created_on
+	toColumn: LocalDateTable_fbd9a0a5-5ffc-4eb1-9bc2-4a7e2b80974b.Date
+
+relationship 0f375dc7-259a-48cc-a723-0d1d5da374df
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd project'.updated_on
+	toColumn: LocalDateTable_5170633e-9f94-4544-b5e7-cafa2772c527.Date
+
+relationship 38f3499f-ea15-4a7f-9812-1294d46fbf92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd project'.dependencies_updated_on
+	toColumn: LocalDateTable_542ba6c7-5464-41b9-8eed-d33af78c1d39.Date
+
+relationship 4e0ee828-1afa-4667-ace4-6b84df9c4a30
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd workflow_execution'.start_time
+	toColumn: LocalDateTable_db324932-c126-49ce-942a-661aff092216.Date
+
+relationship 79f25040-4db3-404f-9827-04622fedab70
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd workflow_execution'.end_time
+	toColumn: LocalDateTable_1e24e30c-ee48-49da-bf70-3522fc7a5d25.Date
+
+relationship 0d2f32e6-cc40-4cc0-ac60-1a117127f402
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd workflow_execution'.created_on
+	toColumn: LocalDateTable_134c21a7-43a5-4a27-afa9-eb999deab8d6.Date
+
+relationship e19c0ff9-bff1-415b-8947-12489cf0ee7e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd workflow_execution'.updated_on
+	toColumn: LocalDateTable_2f58d485-41da-4985-898c-ea64fd7a77d8.Date
+
+relationship 5008dd9c-eaad-42d9-bce2-988546b53013
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'fd workflow_execution'.aborted_on
+	toColumn: LocalDateTable_73a71c57-ec71-4b6c-af53-0d6e02b19077.Date
+
+relationship 816b4fc5-c268-4c74-bfca-275809269e9a
+	fromColumn: 'fd workflow_execution'.project_id
+	toColumn: 'fd project'.project_id
+

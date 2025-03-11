@@ -1,0 +1,133 @@
+table '10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6'
+	lineageTag: c0c466c5-8fbb-45cf-b52f-f369f5827157
+
+	column X
+		dataType: double
+		lineageTag: a53f37a9-8faa-4cac-aa29-a86490ab04e8
+		summarizeBy: sum
+		sourceColumn: X
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Y
+		dataType: double
+		lineageTag: 63a924ac-c3c1-41ce-abb4-58029453dce7
+		summarizeBy: sum
+		sourceColumn: Y
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z
+		dataType: double
+		lineageTag: c681923d-7578-4ef5-8b33-9783cb09490a
+		summarizeBy: sum
+		sourceColumn: Z
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column X_noise
+		dataType: double
+		lineageTag: 3e17f103-dfa3-45a7-bcf7-067cc3640908
+		summarizeBy: sum
+		sourceColumn: X_noise
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Y_noise
+		dataType: double
+		lineageTag: 6bb1439a-c581-4e7d-896e-a9b9ff049427
+		summarizeBy: sum
+		sourceColumn: Y_noise
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Z_noise
+		dataType: double
+		lineageTag: ad2c2464-e927-4007-8347-187265cf31cd
+		summarizeBy: sum
+		sourceColumn: Z_noise
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column R
+		dataType: double
+		lineageTag: 5317786c-c8fa-43c5-9761-2e196a45e885
+		summarizeBy: sum
+		sourceColumn: R
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column G
+		dataType: double
+		lineageTag: 0dca11d0-6c87-4b74-813b-389390d05846
+		summarizeBy: sum
+		sourceColumn: G
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column B
+		dataType: double
+		lineageTag: 330e13d8-e67e-4afc-93a9-97d90f999dfd
+		summarizeBy: sum
+		sourceColumn: B
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column time
+		dataType: double
+		lineageTag: db5adcd0-5074-467c-9833-f8dc1982bbbe
+		summarizeBy: sum
+		sourceColumn: time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column eol
+		dataType: double
+		lineageTag: b81f01f5-e606-4436-9d11-799be0cde4d9
+		summarizeBy: sum
+		sourceColumn: eol
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column label
+		dataType: double
+		lineageTag: 2c1cdd9e-baca-4853-b683-99b9475f7efe
+		summarizeBy: sum
+		sourceColumn: label
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition '10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6' = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(AzureStorage.BlobContents("https://syndlakeacnt.blob.core.windows.net/synfs/area1.parquet?sp=r&st=2024-04-27T15:01:10Z&se=2024-04-27T23:01:10Z&spr=https&sv=2022-11-02&sr=b&sig=yEyrNwX1anjT%2BUaNBuq44Kyo%2FRvxnb7mWgMnDH6Mx5c%3D"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

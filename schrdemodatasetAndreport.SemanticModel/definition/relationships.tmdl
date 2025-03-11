@@ -1,0 +1,10 @@
+relationship 5898ec11-6305-4a48-93b6-53ca76e92be2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: schrdemo.tpep_pickup_datetime
+	toColumn: LocalDateTable_72ee0721-4d81-4106-9d6c-2d9cc239456f.Date
+
+relationship fd649f4c-9863-4425-af31-bf3767459870
+	joinOnDateBehavior: datePartOnly
+	fromColumn: schrdemo.tpep_dropoff_datetime
+	toColumn: LocalDateTable_c1a34633-3bde-4bd1-a5c9-7cb8de123248.Date
+
