@@ -1,0 +1,150 @@
+table uk_traffic_accidents_details
+	lineageTag: b13c84f4-ce89-4619-b33b-b0f51f5707fb
+
+	column Accident_Index
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: dc789953-4532-4f46-9551-39ad0a232f44
+		summarizeBy: none
+		sourceColumn: Accident_Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column Accident_Severity
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1b04faa7-025f-43c1-98a7-b52a75effa58
+		summarizeBy: none
+		sourceColumn: Accident_Severity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 0ad6ee30-2103-465b-b076-b567a0200ae8
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Day_of_Week
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 53c7bfe2-1637-4244-8db8-1444fa3492be
+		summarizeBy: none
+		sourceColumn: Day_of_Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column Light_Conditions
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8baf3716-d755-42e0-a14a-80f4deaccb20
+		summarizeBy: none
+		sourceColumn: Light_Conditions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Casualties
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e6789e65-f185-41c6-8961-cf67e1197ced
+		summarizeBy: sum
+		sourceColumn: Number_of_Casualties
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_of_Vehicles
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 78def3a9-8162-446d-86d7-0a11ac5e4da7
+		summarizeBy: sum
+		sourceColumn: Number_of_Vehicles
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pedestrian_Crossing-Human_Control
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 240e9383-3fc1-49fd-b318-416646fe3bf5
+		summarizeBy: none
+		sourceColumn: Pedestrian_Crossing-Human_Control
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pedestrian_Crossing-Physical_Facilities
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 239bc147-abab-4953-bb7f-83338077f751
+		summarizeBy: none
+		sourceColumn: Pedestrian_Crossing-Physical_Facilities
+
+		annotation SummarizationSetBy = Automatic
+
+	column Road_Surface_Conditions
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 18846fa4-2dbc-46a5-9c70-ac428f89ece7
+		summarizeBy: none
+		sourceColumn: Road_Surface_Conditions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Speed_limit
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e0e937d0-867e-4d46-b14d-8e801416e134
+		summarizeBy: sum
+		sourceColumn: Speed_limit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cbbcb5c8-c187-4bbe-b6a7-b8d80e42a452
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weather_Conditions
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 844e0344-0b8d-4498-a998-3fcd6bc8c753
+		summarizeBy: none
+		sourceColumn: Weather_Conditions
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 64a72d7e-6104-481a-8ca9-65434e1246ee
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition uk_traffic_accidents_details = m
+		mode: directQuery
+		source =
+				let
+				    Source = Databricks.Catalogs("adb-2771503561335981.1.azuredatabricks.net", "sql/protocolv1/o/2771503561335981/0204-035332-anxg65wd", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    hive_metastore_Database = Source{[Name="hive_metastore",Kind="Database"]}[Data],
+				    democicd_Schema = hive_metastore_Database{[Name="democicd",Kind="Schema"]}[Data],
+				    uk_traffic_accidents_details_Table = democicd_Schema{[Name="uk_traffic_accidents_details",Kind="Table"]}[Data]
+				in
+				    uk_traffic_accidents_details_Table
+
+	annotation PBI_ResultType = Table
+

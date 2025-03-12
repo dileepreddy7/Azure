@@ -1,0 +1,28 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["fd project","fd workflow_execution"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.128.1380.0 (24.04)
+
+ref table 'fd project'
+ref table DateTableTemplate_c31260df-f88a-4dbb-9de7-073ccd864d0a
+ref table LocalDateTable_fbd9a0a5-5ffc-4eb1-9bc2-4a7e2b80974b
+ref table LocalDateTable_5170633e-9f94-4544-b5e7-cafa2772c527
+ref table LocalDateTable_542ba6c7-5464-41b9-8eed-d33af78c1d39
+ref table 'fd workflow_execution'
+ref table LocalDateTable_db324932-c126-49ce-942a-661aff092216
+ref table LocalDateTable_1e24e30c-ee48-49da-bf70-3522fc7a5d25
+ref table LocalDateTable_134c21a7-43a5-4a27-afa9-eb999deab8d6
+ref table LocalDateTable_2f58d485-41da-4985-898c-ea64fd7a77d8
+ref table LocalDateTable_73a71c57-ec71-4b6c-af53-0d6e02b19077
+
+ref cultureInfo en-US
+

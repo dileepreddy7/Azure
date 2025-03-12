@@ -1,0 +1,112 @@
+table order_details
+	lineageTag: 34564dd5-a9fc-44bb-ab2f-4b934b7b1e11
+
+	column 'Order ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: ffddd68d-ab23-4b3f-9480-6b919371a087
+		summarizeBy: count
+		sourceColumn: Order ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0c768360-c9b0-471f-ab7b-2ad460a65935
+		summarizeBy: none
+		sourceColumn: Order Date
+
+		variation Variation
+			isDefault
+			relationship: 7d414025-56a4-4101-a637-1c0f1a934436
+			defaultHierarchy: LocalDateTable_76f764b1-c8a9-4e45-8920-1bcceb800145.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Order Quantity'
+		dataType: int64
+		formatString: 0
+		lineageTag: fd3ea84a-f41f-4c90-b844-e59009c39320
+		summarizeBy: sum
+		sourceColumn: Order Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales
+		dataType: double
+		lineageTag: 6fc5fb97-29d6-447c-bbfb-74fc0f8842dc
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ship Mode'
+		dataType: string
+		lineageTag: 40163348-8dde-4e17-8a90-e73e2e336d78
+		summarizeBy: none
+		sourceColumn: Ship Mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profit
+		dataType: double
+		lineageTag: 94c731a5-41cd-4374-bbcb-fa3dba4a62b0
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: 6d69edf9-01bb-49b5-937d-5e0acacc9c7c
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: 3234a08f-a523-47ca-9eea-c9c53dba9617
+		summarizeBy: none
+		sourceColumn: Customer Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Segment'
+		dataType: string
+		lineageTag: 73186186-d14d-4b4c-82ee-eb63e8981840
+		summarizeBy: none
+		sourceColumn: Customer Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Category'
+		dataType: string
+		lineageTag: 446c7808-7a5a-4101-966e-4d370829c2b6
+		summarizeBy: none
+		sourceColumn: Product Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition order_details = m
+		mode: import
+		source =
+				let
+				    Source = Databricks.Catalogs("adb-2771503561335981.1.azuredatabricks.net", "sql/protocolv1/o/2771503561335981/0204-035332-anxg65wd", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
+				    hive_metastore_Database = Source{[Name="hive_metastore",Kind="Database"]}[Data],
+				    democicd_Schema = hive_metastore_Database{[Name="democicd",Kind="Schema"]}[Data],
+				    order_details_Table = democicd_Schema{[Name="order_details",Kind="Table"]}[Data]
+				in
+				    order_details_Table
+
+	annotation PBI_ResultType = Table
+

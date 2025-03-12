@@ -1,0 +1,5 @@
+relationship 7d414025-56a4-4101-a637-1c0f1a934436
+	joinOnDateBehavior: datePartOnly
+	fromColumn: order_details.'Order Date'
+	toColumn: LocalDateTable_76f764b1-c8a9-4e45-8920-1bcceb800145.Date
+
